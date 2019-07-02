@@ -1,0 +1,14 @@
+[Unit]
+Description=Start PIR Camera Recording
+After=default.target
+
+[Service]
+ExecStart=/usr/bin/python3 /tmp/security.py
+Restart=always
+KillSignal=SIGINT
+TimeoutSec=70
+StandardOutput=inherit
+StandardError=inherit
+
+[Install]
+WantedBy=default.target

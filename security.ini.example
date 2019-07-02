@@ -1,0 +1,53 @@
+[LOGGING]
+# Full path to filename of base log filename
+log_filename=/tmp/security.log
+# A Timed midnight rotating log file is used so number of backup log files are needed
+backup_count=7
+
+[SECURITY]
+# Log level for this module (CRITICAL, ERROR, WARNING, INFO, DEBUG)
+log_level=WARNING
+
+[EMAILER]
+# TLS Capable SMTP server
+Server=smtp.domain.com
+Port=587
+From=user@domain.com
+To=user@domain.com
+User=user@domain.com
+Password=mypass
+# Log level for this module (CRITICAL, ERROR, WARNING, INFO, DEBUG)
+log_level=WARNING
+
+[RECORD]
+# Camera Settings
+hflip=True
+vflip=True
+video_quality=25
+image_quality=65
+# A full path to the location to store recorded video in
+video_out_path=/tmp/video
+# A full path to the location to store the PIR triggered images in
+notification_out_path=/tmp/notify
+# Log level for this module (CRITICAL, ERROR, WARNING, INFO, DEBUG)
+log_level=WARNING
+
+[PIR]
+# Board mode pin number of pir GPIO connection
+pin=7
+# Minimum time between triggers
+min_trigger_seconds=60
+# Really time enable/disable file (if exists disable triggering)
+disable=/tmp/pir_disable
+# Log level for this module (CRITICAL, ERROR, WARNING, INFO, DEBUG)
+log_level=WARNING
+
+[MP4_CONVERT]
+# Log level for this module (CRITICAL, ERROR, WARNING, INFO, DEBUG)
+log_level=WARNING
+
+[CLEANUP]
+# Log level for this module (CRITICAL, ERROR, WARNING, INFO, DEBUG)
+log_level=WARNING
+# Number of days of video and images to keep
+days_to_keep=30
